@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bank</h3>
+    <p>Transactions : <span id="count">0</span></p>
+    <button onclick="inc()">Increase</button>
+    <button onclick="reset()">Reset Counter</button>
+    <button onclick="dec()">Decrease</button>
+
+    <script>
+        let count=0; 
+        function inc() {
+            count ++;
+            document.getElementById('count').textContent=count;
+        }
+        function dec() {
+            if (count>0) {
+                count --;
+            }
+            document.getElementById('count').textContent=count;
+        }
+        function reset() {
+            count=0;
+            document.getElementById('count').textContent=count;
+        }
+    </script>
+</body>
+</html> 

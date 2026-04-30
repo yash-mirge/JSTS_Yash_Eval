@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Welcome to bank</h4>
+    <input type="text" id="i1"><br>
+    <button id="btn">Add</button><br><br>
+    <ul id="ul">
+        <li>Balance : 5000</li>
+    </ul>
+    <script> 
+        const btn=document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            const data=document.getElementById('i1').value;
+            const ul=document.getElementById('ul');
+            const li=document.createElement('li');
+            li.textContent=data;
+            ul.appendChild(li);          
+        })
+    </script>
+</body>
+</html>
